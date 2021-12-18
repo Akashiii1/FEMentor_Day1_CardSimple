@@ -1,0 +1,133 @@
+:root{
+  --primary:hsl(225, 100%, 94%);
+  --secondary:hsl(245, 75%, 52%);
+  --darkBlue:hsl(223, 47%, 23%);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Red Hat Display', sans-serif;
+  min-height: 100vh;
+  background-image: url(images/pattern-background-desktop.svg) ;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--primary);
+  position: relative;
+  font-size: 100%;
+}
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 28.125rem;
+  background-color: #fff;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  
+}
+.text-content{
+  padding: 7%;
+  text-align: center ;
+}
+.title{
+  color: var(--darkBlue);
+  font-weight: 900;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  
+}
+.text-content p.sub-title{
+  color: #8a8a8a;
+  margin-bottom: 25px;
+ 
+  
+}
+.plan-box{
+  background-color: hsl(225, 100%, 98%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  border-radius: 12px;
+}
+.plan-box .plan-box-left{
+  display: flex;
+  align-items: center; 
+  text-align: left;
+  gap: 0 20px;
+}
+.plan-box-left div h5{
+  font-size: 0.9375rem;
+  font-weight: 900;
+  color: var(--darkBlue);
+}
+.plan-box-left div p{
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #8a8a8a;
+}
+.plan-box a{
+  font-weight: 900;
+  color: var(--darkBlue);
+  transition:  all 150ms ease-in-out;
+}
+.plan-box a:hover{
+  text-decoration: none;
+  color: hsl(245, 75%, 52%);
+}
+a.proceed-btn{
+  display: block;
+  text-decoration: none;
+  padding: 20px 0;
+  background-color: var(--secondary);
+  color: #fff;
+  border-radius: 12px;
+  font-weight: 900;
+  margin: 30px 0;
+  transition: all 150ms ease-in-out;
+}
+a.proceed-btn:hover{
+  opacity: 0.8;
+}
+a.cancel-btn:hover{
+  color: var(--darkBlue);
+}
+a.cancel-btn{
+  color: hsl(224, 23%, 55%);
+  text-decoration: none;
+  font-weight: 900;
+  transition: all 150ms ease-in-out;
+}
+@media only screen and (max-width:425px){
+  body{
+    background-image: url(images/pattern-background-mobile.svg);
+    background-position:left right;
+    font-size: 14px;
+
+  }
+  .container{
+    max-width: 87%;
+  }
+  .title{
+    font-size: 1.64rem;
+  }
+  div.plan-box{
+    padding: 12px;
+  }
+  .plan-box-left{
+    gap: 0 10px
+  }
+  a.proceed-btn,
+  a.cancel-btn,.plan-box a{
+    font-size: 13px;
+
+
+  }
+  .text-content{
+    padding: 9% 7%;
+  }
+}
